@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>人狼オンライン（ルーム版）</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🐺 人狼オンライン（ルーム版）</h1>
+
+    <section id="roomSection">
+      <input id="roomIdInput" placeholder="ルームID" />
+      <input id="nameInput" placeholder="名前" />
+      <label><input type="checkbox" id="publicCheck" /> 公開ルームにする</label>
+      <button id="joinRoomBtn">ルームに参加</button>
+      <button id="listPublicBtn">公開ルーム一覧</button>
+      <div id="publicList"></div>
+    </section>
+
+    <section id="game" class="hidden">
+      <div id="hostStartDiv" class="hidden">
+        <button id="startBtn">ゲーム開始</button>
+      </div>
+
+      <h2>フェーズ: <span id="phase"></span> / 日数: <span id="day"></span></h2>
+      <ul id="players"></ul>
+
+      <div id="roleCard">???</div>
+
+      <div id="seerBox" class="hidden">
+        <span>🔮 占う:</span>
+        <select id="seerTarget"></select>
+        <button id="seerBtn">決定</button>
+        <div id="seerResult"></div>
+      </div>
+
+      <div id="hunterBox" class="hidden">
+        <span>🛡 守る:</span>
+        <select id="hunterTarget"></select>
+        <button id="hunterBtn">決定</button>
+      </div>
+
+      <div id="wolfBox" class="hidden">
+        <span>🐺 襲撃:</span>
+        <select id="wolfTarget"></select>
+        <button id="wolfBtn">決定</button>
+      </div>
+
+      <div id="chatArea">
+        <div id="chatLog"></div>
+        <input id="chatInput" placeholder="発言" />
+        <button id="chatSend">送信</button>
+      </div>
+
+      <div id="voteArea">
+        <span>🗳️ 投票:</span>
+        <select id="voteTarget"></select>
+        <button id="voteBtn">投票</button>
+      </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

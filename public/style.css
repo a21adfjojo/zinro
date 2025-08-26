@@ -1,0 +1,51 @@
+body {
+  background: #222;
+  color: #eee;
+  font-family: sans-serif;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+#chatLog {
+  border: 1px solid #555;
+  padding: 10px;
+  height: 150px;
+  overflow: auto;
+  margin-bottom: 10px;
+  background: #111;
+}
+#players {
+  list-style: none;
+  padding: 0;
+}
+#players li {
+  padding: 4px;
+  border-bottom: 1px solid #555;
+}
+#roleCard {
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid yellow;
+}
+select,
+button,
+input {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1em;
+}
+#chatArea,
+#voteArea {
+  margin-top: 10px;
+}
+.systemMsg {
+  color: yellow;
+  font-weight: bold;
+}
+#players li.dead {
+  color: red;
+  text-decoration: line-through;
+}
